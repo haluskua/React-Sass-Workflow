@@ -42,11 +42,27 @@ $colors: (
 // );
 
 // spacing
-$base-padding: 0.75rem;
-$base-margin: 0.75rem;
+$base-margin: 0.75vw;
+
+//max-width
+$max-width: 100vw;
+$max-width-sm: $max-width, 8;
+$max-width-md: $max-width, 4;
+$max-width-lg: $max-width, 2;
+
+//padding
+$base-padding: 1.25vw;
+$base-padding-sm: $base-padding * 0.75;
+$base-padding-md: $base-padding * 1.15;
+$base-padding-lg: $base-padding * 1.8;
+$base-padding-xl: $base-padding * 2.3;
 
 // borders
 $base-border-thickness: 1px;
+$base-border-sm: $base-border-thickness * .75px;
+$base-border-md: $base-border-thickness * 1.05px;
+$base-border-lg: $base-border-thickness * 1.5px;
+
 $base-border-radius: 20px;
 
 // box-shadow

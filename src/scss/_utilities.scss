@@ -8,11 +8,10 @@ $utilities: (
     "prefix": "p",
     "values": (
       "0": 0,
-      "1": $base-padding,
-      "2": $base-padding * 2,
-      "3": $base-padding * 4,
-      "4": $base-padding * 6,
-      "5": $base-padding * 8,
+      "sm": $base-padding,
+      "md": $base-padding * 2,
+      "lg": $base-padding * 4,
+      "xl": $base-padding * 6,
     ),
   ),
   "padding-left": (
@@ -129,6 +128,27 @@ $utilities: (
       "100": 1,
     ),
   ),
+  "border": (
+    "prefix": "b",
+    "values": (
+      "default": $base-border-thickness,
+      "none": 0,
+      "xs": math.div($base-border-thickness, 4),
+      "sm": math.div($base-border-thickness, 2),
+      "md": $base-border-thickness * 1.24
+    )
+  ),
+  
+  "max-width": (
+    "prefix": "mw",
+    "values": (
+      "default": auto,
+      "sm": math.div($max-width, 8),
+      "md": math.div($max-width, 4),
+      "lg": math.div($max-width, 0.82),
+    )
+  ),
+  
   "border-radius": (
     "prefix": "br",
     "values": (
@@ -141,7 +161,7 @@ $utilities: (
     ),
   ),
   "display": (
-    "prefix": "display",
+    "prefix": "dpy",
     "values": (
       "n": none,
       "b": block,
@@ -150,8 +170,16 @@ $utilities: (
       "i-b": inline-block,
     ),
   ),
+  "flex-direction": (
+    "prefix": "fdxn",
+    "values": (
+      "c": column,
+      "r": row,
+    ),
+  ),
+
   "font-size": (
-    "prefix": "font",
+    "prefix": "fs",
     "values": (
       "sm": $font-size-sm,
       "md": $base-font-size,
@@ -160,6 +188,7 @@ $utilities: (
       "xxl": $font-size-xxl,
     ),
   ),
+
 );
 
 // generate utility classes
