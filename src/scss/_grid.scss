@@ -14,13 +14,12 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
   // background-color: $card;
   scroll-snap-type: y mandatory;
   height: auto;
   overflow-y: auto;
-  padding: $base-padding * 2;
+  padding: $base-padding * 0.5;
 }
 .row {
   display: flex;

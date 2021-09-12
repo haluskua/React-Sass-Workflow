@@ -36,11 +36,9 @@ img {
 
 ///////////////////
 h1 {
-  color: $primary-text;
   padding: $base-padding;
-
-  margin-bottom: $base-margin;
 }
+
 a {
   color: $secondary;
 }
@@ -90,38 +88,4 @@ section {
   scroll-snap-align: start;
   padding: $base-padding;
   box-shadow: $base-box-shadow;
-}
-.one {
-  align-items: center;
-  height: 80vh;
-  padding: $base-padding;
-}
-.two {
-  height: 60vh;
-  align-items: center;
-}
-.three {
-  height: 40vh;
-  flex-direction: column;
-  div {
-    display: flex;
-    justify-self: center;
-    width: 60%;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-.four {
-  height: 90vh;
-}
-.five {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-}
-.six {
-  background-color: $secondary;
-}
-.seven {
-  background-color: $error;
 }
