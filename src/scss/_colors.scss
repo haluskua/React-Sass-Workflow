@@ -27,6 +27,11 @@
       .bg-#{$key}-light-#{$i} {
         background-color: mix(white, $val, $i * 10);
       }
+      .bg-hover-#{$key} {
+        &:hover {
+          background-color: $val;
+        }
+      }
     }
     // dark variations
 
