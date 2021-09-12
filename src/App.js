@@ -2,7 +2,7 @@
 function App() {
   return (
     <div className="container bg-error text-white">
-     <h1>This is the sass setup before the vendor prefixes and gulp watch </h1>
+     <h1>With CRA you most definitely don't need gulp as a task runner. Most of it is taken care of by Babel </h1>
      
     </div>
   );
