@@ -1,0 +1,80 @@
+////// quick and fast Classes for tags to incorporate 
+
+
+
+
+@use 'sass:math';
+@import "../config";
+
+
+//////------
+%wrap-within {
+    display: flex;
+    background-color: $suit;
+    border-radius: math.div($base-border-radius, 4);
+  }
+//////------
+  %RESPONSIVE-FONT {
+    display: flex;
+    align-self: center;
+    font-size: calc(0.81rem + 0.23vw);
+    padding: $base-padding-md;
+    @include lg {
+      max-width: 45vw;
+      text-align: justify;
+    }
+  }
+  //////------
+  //////------
+  %L-TITLE {
+    font-size: calc(0.651rem + 1.1vw);
+}
+//////------
+  //////------
+  %M-TITLE {
+    font-size: calc(0.51rem + 0.886vw);
+}
+//////------
+
+/////////////////////////////////////////////
+// X-Axis box-styling 
+%X-FLEX-CENTER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $base-padding-sm;
+  background-color: $suit;
+  margin: $base-margin * 2;
+  
+  @include box-shadow-two;
+  @include lg {
+    max-width: $max-width-md;
+    padding: $base-padding-lg;
+  }
+}
+.x-row {
+    @extend %X-FLEX-CENTER;
+  }
+
+
+
+
+// Y-Axis box-styling 
+%Y-FLEX-CENTER {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $base-padding-sm;
+  @include box-shadow-two;
+}
+.y-align {
+  @extend %Y-FLEX-CENTER;
+}
+
+
+///// CARD styling
+
+.card-wrap {
+  @extend %X-FLEX-CENTER;
+}

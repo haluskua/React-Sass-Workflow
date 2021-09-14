@@ -1,33 +1,53 @@
-@mixin btn($bg-color: #e2e2e2) {
+
+//// BIG BUTTON CLASS
+@mixin btn-LG($bg-color: $error) {
+  //mobile first mdQuery
+  @extend %X-FLEX-CENTER;
+  @extend %L-TITLE;
   text-decoration: none;
+  min-width: 33vw;
   cursor: pointer;
-  display: inline-block;
   border: 0;
-  padding: $base-padding $base-padding * 2;
+  padding: $base-padding * 1.15;
+  
   border-radius: $base-border-radius;
   background-color: $bg-color;
+  @include md {
+    min-width: 26.3vw;
+  }
+  @include lg{
+    min-width: 18vw;
+  }
 }
 
-.btn {
-  @include btn;
+//MEDIUM BUTTON CLASS
+@mixin btn-MD {
+  @extend %M-TITLE;
+  @include btn-LG($bg-color: $secondary);
+  padding: $base-padding * 0.82;
+  min-width: 26vw;
+  @include md {
+    min-width: 18.55vw;
+  }
+  
 }
 
 @each $key, $val in $colors {
   .btn-#{$key} {
-    @include btn($val);
+    @include btn-LG($val);
     &:hover {
       background-color: lighten($val, 5);
     }
   }
   .btn-outlined-#{$key} {
-    @include btn(#fff);
+    @include btn-LG(#fff);
     border: $base-border-thickness solid $val;
     &:hover {
       background-color: $val;
     }
   }
   .btn-complement-#{$key} {
-    @include btn($val);
+    @include btn-LG($val);
     color: light-comp($val);
     &:hover {
       color: $val;

@@ -1,0 +1,37 @@
+//new styles applies to classes placed below
+
+
+
+
+.r-paragraph {
+    @extend %RESPONSIVE-FONT;
+    
+  }
+
+.btn-one {
+    text-align: center;
+    @include xs {
+        max-width: 50%;
+        align-self: center;
+        
+    }
+    @include sm {
+        font-size: $font-size-sm;
+        padding: $base-padding;
+        
+    }
+    @include lg {
+        font-size: $base-font-size/2;
+    }
+    
+}
+
+.btn-Lg{
+    @include btn-LG;
+
+  }
+.btn-Md{
+    @include btn-MD;
+
+  }
+
