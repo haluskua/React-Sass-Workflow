@@ -5,31 +5,22 @@
   @extend %X-FLEX-CENTER;
   @extend %L-TITLE;
   text-decoration: none;
-  min-width: 33vw;
   cursor: pointer;
   border: 0;
-  padding: $base-padding * 1.15;
-  
+  // padding: calc(1.61vw + 0.1vw);
+  padding: clamp(11px, 20vw, 19px);
   border-radius: $base-border-radius;
   background-color: $bg-color;
-  @include md {
-    min-width: 26.3vw;
-  }
-  @include lg{
-    min-width: 18vw;
-  }
+  min-width: calc(11vw + 8vw);
 }
 
 //MEDIUM BUTTON CLASS
 @mixin btn-MD {
   @extend %M-TITLE;
   @include btn-LG($bg-color: $secondary);
-  padding: $base-padding * 0.82;
-  min-width: 26vw;
-  @include md {
-    min-width: 18.55vw;
-  }
-  
+  padding: clamp(9px, 16vw, 19px);
+  // padding: calc(0.71vw + 0.6vw);
+  min-width: calc(8vw + 7vw);
 }
 
 @each $key, $val in $colors {
@@ -39,6 +30,7 @@
       background-color: lighten($val, 5);
     }
   }
+  
   .btn-outlined-#{$key} {
     @include btn-LG(#fff);
     border: $base-border-thickness solid $val;
@@ -46,6 +38,7 @@
       background-color: $val;
     }
   }
+  
   .btn-complement-#{$key} {
     @include btn-LG($val);
     color: light-comp($val);

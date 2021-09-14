@@ -47,10 +47,10 @@ function App() {
       <Button className="r-font">Normal Button</Button>
     <TomatoButton>Tomato Button</TomatoButton>
     <button className="btn-Lg r-paragraph">
-    LARGE button
+    LARGE BUTTON
     </button>
     <button className="btn-Md r-paragraph">
-    MEDIUM button
+    MEDIUM BUTTON
     </button>
     </section>
   );
